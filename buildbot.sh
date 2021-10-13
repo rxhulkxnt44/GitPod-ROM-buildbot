@@ -1,9 +1,9 @@
 # Rom building script for CircleCI
 # coded by bruh™ aka Live0verfl0w
 
-MANIFEST_LINK=https://github.com/Project-Awaken/android_manifest.git
-BRANCH=11
-ROM_NAME=awaken
+MANIFEST_LINK=https://github.com/SuperiorOS/manifest.git
+BRANCH=eleven
+ROM_NAME=superior
 DEVICE_CODENAME=vince
 GITHUB_USER=rk134
 GITHUB_EMAIL=rahul.kantrapally@gmail.com
@@ -25,7 +25,7 @@ repo sync --current-branch --force-sync --no-clone-bundle --no-tags --optimized-
 rm -rf hardware/qcom-caf/msm8996/audio
 rm -rf hardware/qcom-caf/msm8996/display
 rm -rf hardware/qcom-caf/msm8996/media
-git clone -b awaken https://github.com/rxhulkxnt44/device_xiaomi_vince.git device/xiaomi/vince
+git clone -b superior https://github.com/rxhulkxnt44/device_xiaomi_vince.git device/xiaomi/vince
 git clone -b arrow-11.0 https://github.com/rxhulkxnt44/vendor_xiaomi_vince.git vendor/xiaomi/vince
 git clone -b darky https://github.com/Blacksuan19/kernel_dark_ages_vince.git kernel/xiaomi/vince
 cd hardware/qcom-caf/msm8996
@@ -37,6 +37,6 @@ cd ../../../
 
 # Start building!
 . build/envsetup.sh
-lunch awaken_${DEVICE_CODENAME}-eng
+lunch superior_${DEVICE_CODENAME}-eng
 make sepolicy
 
